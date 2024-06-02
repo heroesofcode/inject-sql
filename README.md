@@ -40,7 +40,7 @@ Choose your payload
 8 - Get Database
 ```
 
-<img src="https://github.com/heroesofcode/injeqtor/blob/feature/add-documentation/img/example.png?raw=true" height=400>
+<img src="https://github.com/heroesofcode/injeqtor/blob/main/img/example.png?raw=true" height=400>
 
 If you want to test or are studying pentest I recommend you use these tools below:
 
