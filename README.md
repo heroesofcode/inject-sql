@@ -29,7 +29,7 @@ brew install heroesofcode/taps/injeqtor
 
 #### How to test?
 
-If you want to study or are studying pentent I recommend you use these tools below:
+If you want to test or are studying pentest I recommend you use these tools below:
 
 - [Acunetix](http://testphp.vulnweb.com/) 🇬🇧
 - [HackTheBox](https://www.hackthebox.com/) 🇬🇧
