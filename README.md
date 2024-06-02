@@ -25,7 +25,7 @@ brew tap heroesofcode/taps
 brew install heroesofcode/taps/injeqtor
 ```
 
-## How to use
+## Usage
 In these options you will have several ways to try to find a vulnerability
 
 ```
