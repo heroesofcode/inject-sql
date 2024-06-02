@@ -24,7 +24,8 @@ async fn main() {
     println!("4 - blind 1");
     println!("5 - blind 2");
     println!("6 - boolean 1");
-    println!("7 - boolean 2\n");
+    println!("7 - boolean 2");
+    println!("8 - Get Database\n");
 
     println!("Enter the payload type");
     io::stdin().read_line(&mut payload_type).expect("Unable to read payload type");
