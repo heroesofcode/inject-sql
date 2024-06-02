@@ -27,7 +27,20 @@ brew install heroesofcode/taps/injeqtor
 
 ## How to use
 
-#### How to test?
+### How to test?
+
+```
+Choose your payload
+1 - classical 1
+2 - classical 2
+3 - time-based
+4 - blind 1
+5 - blind 2
+6 - boolean 1
+7 - boolean 2
+8 - Get Database
+
+```
 
 If you want to test or are studying pentest I recommend you use these tools below:
 
