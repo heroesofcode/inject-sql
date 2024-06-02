@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/heroesofcode/injeqtor/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/injeqtor/actions/workflows/CI.yml)
 [![Crates.io](https://img.shields.io/crates/v/injeqtor)](https://crates.io/crates/injeqtor)
-![Msrv](https://img.shields.io/badge/msrv-1.56.1-blue.svg?logo=rust&logoColor=orange)
+[![Rustc](https://img.shields.io/badge/rustc-1.70.0-blue.svg?logo=rust&logoColor=orange)](https://img.shields.io/badge/rustc-1.70.0-blue.svg?logo=rust&logoColor=orange)
 [![Downloads](https://img.shields.io/crates/d/injeqtor.svg?logo=rust&logoColor=orange)](https://crates.io/crates/injeqtor)
 [![License](https://img.shields.io/github/license/heroesofcode/injeqtor.svg)](https://github.com/heroesofcode/injeqtor/blob/main/LICENSE)
 
@@ -26,8 +26,7 @@ brew install heroesofcode/taps/injeqtor
 ```
 
 ## How to use
-
-### How to test?
+In these options you will have several ways to try to find a vulnerability
 
 ```
 Choose your payload
@@ -39,8 +38,9 @@ Choose your payload
 6 - boolean 1
 7 - boolean 2
 8 - Get Database
-
 ```
+
+<img src="https://github.com/heroesofcode/injeqtor/blob/feature/add-documentation/img/example.png?raw=true" height=400>
 
 If you want to test or are studying pentest I recommend you use these tools below:
 
