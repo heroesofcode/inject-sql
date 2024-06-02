@@ -47,4 +47,4 @@ To contribute, just fork this project and then open a pull request, feel free to
 
 ## License
 
-injeqtor is released under the MIT license. See [LICENSE](https://github.com/heroesofcode/xrun/blob/main/LICENSE) for details.
+injeqtor is released under the MIT license. See [LICENSE](https://github.com/heroesofcode/injector/blob/main/LICENSE) for details.
