@@ -18,10 +18,13 @@ async fn main() {
     let url = url.trim().to_string();
 
     println!("\nChoose your payload");
-    println!("1 - classical");
-    println!("2 - time-based");
-    println!("3 - blind");
-    println!("4 - boolean\n");
+    println!("1 - classical 1");
+    println!("2 - classical 2");
+    println!("3 - time-based");
+    println!("4 - blind 1");
+    println!("5 - blind 2");
+    println!("6 - boolean 1");
+    println!("7 - boolean 2\n");
 
     println!("Enter the payload type");
     io::stdin().read_line(&mut payload_type).expect("Unable to read payload type");

