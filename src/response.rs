@@ -1,3 +1,4 @@
+use std::process::exit;
 use reqwest::Client;
 use regex::Regex;
 use scraper::{Html, Selector};
@@ -19,6 +20,7 @@ pub async fn validation_exist_sql_injection(
                 false).await {
 
                 println!("Request error: {}", error);
+                exit(1);
             }
         },
         "2" => {
@@ -31,6 +33,7 @@ pub async fn validation_exist_sql_injection(
                 false).await {
 
                 println!("Request error: {}", error);
+                exit(1);
             }
         },
         "3" => {
@@ -43,6 +46,7 @@ pub async fn validation_exist_sql_injection(
                 false).await {
 
                 println!("Request error: {}", error);
+                exit(1);
             }
         },
         "4" => {
@@ -55,6 +59,7 @@ pub async fn validation_exist_sql_injection(
                 false).await {
 
                 println!("Request error: {}", error);
+                exit(1);
             }
         },
         "5" => {
@@ -67,6 +72,7 @@ pub async fn validation_exist_sql_injection(
                 false).await {
 
                 println!("Request error: {}", error);
+                exit(1);
             }
         },
         "6" => {
@@ -79,6 +85,7 @@ pub async fn validation_exist_sql_injection(
                 false).await {
 
                 println!("Request error: {}", error);
+                exit(1);
             }
         },
         "7" => {
@@ -91,6 +98,7 @@ pub async fn validation_exist_sql_injection(
                 false).await {
 
                 println!("Request error: {}", error);
+                exit(1);
             }
         },
         "8" => {
@@ -104,9 +112,13 @@ pub async fn validation_exist_sql_injection(
                 true).await {
 
                 println!("Request error: {}", error);
+                exit(1);
             }
         }
-        _ => println!("Options not found")
+        _ => {
+            println!("Options not found");
+            exit(1);
+        }
     }
 
     Ok(())
@@ -132,7 +144,8 @@ async fn response(
             extract_information_schema(&body);
         }
     } else {
-        println!("Failed to make the request")
+        println!("Failed to make the request");
+        exit(1);
     }
 
     Ok(())
@@ -158,6 +171,9 @@ fn extract_information_schema(html_content: &str) {
         if text.contains("information_schema") && !css_regex.is_match(&text) {
             println!("{}", text.trim());
             break;
+        } else {
+            println!("Database not found");
+            exit(1);
         }
     }
 }

@@ -1,4 +1,5 @@
 use std::io;
+use std::process::exit;
 use tokio;
 
 mod response;
@@ -37,5 +38,6 @@ async fn main() {
         }
     } else {
         println!("Fields cannot be empty");
+        exit(1);
     }
 }
