@@ -2,6 +2,7 @@ use std::process::exit;
 use reqwest::Client;
 use regex::Regex;
 use scraper::{Html, Selector};
+use colored::Colorize;
 
 pub async fn validation_exist_sql_injection(
     url: &str,
@@ -131,7 +132,7 @@ async fn response(
     show_body: bool) -> Result<(), reqwest::Error> {
 
     let test_url = format!("{}{}", url, payload);
-    println!("... Testing");
+    println!("{}", "Testing.....".blue());
 
     let response = client.get(test_url).send().await?;
 
@@ -153,9 +154,9 @@ async fn response(
 
 fn contains_sql_injection(body: String) {
     if body.contains("mysql_fetch_array()") || body.contains("SQL syntax") {
-        println!("Using this URL it is possible to carry out a SQL Injection attack");
+        println!("{}", "[x] Vulnerable to SQL Injection".green());
     } else {
-        println!("No vulnerabilities found");
+        println!("{}", "[] No vulnerabilities found".red());
     }
 }
 
