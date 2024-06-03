@@ -1,12 +1,15 @@
 use std::io;
 use std::process::exit;
 use tokio;
+use clap::Command;
 
 mod response;
 use response::validation_exist_sql_injection;
 
 #[tokio::main]
 async fn main() {
+    check_version();
+
     println!("Injeqtor");
 
     println!("Command Line Tools to check for SQL Injection vulnerability\n");
@@ -40,4 +43,11 @@ async fn main() {
         println!("Fields cannot be empty");
         exit(1);
     }
+}
+
+fn check_version() {
+    let _app = Command::new("injeqtor")
+        .version("0.1.0")
+        .ignore_errors(true)
+        .get_matches();
 }
