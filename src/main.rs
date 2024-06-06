@@ -36,8 +36,8 @@ async fn main() {
     let payload_type = payload_type.trim().to_string();
 
     if !url.is_empty() || !payload_type.is_empty() {
-        if let Err(error) = validation_exist_sql_injection(&url, &payload_type).await {
-            println!("Error when testing SQL injection: {}", error);
+        if let Err(e) = validation_exist_sql_injection(&url, &payload_type).await {
+            eprintln!("Error: {}", e);
         }
     } else {
         println!("Fields cannot be empty");
