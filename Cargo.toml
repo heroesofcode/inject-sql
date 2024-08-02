@@ -7,6 +7,6 @@ edition = "2021"
 reqwest = { version = "0.12.5", features = ["json"] }
 tokio = { version = "1.39.2", features = ["full"] }
 scraper = "0.19.1"
-regex = "1.10.5"
+regex = "1.10.6"
 colored = "2"
 clap = "4.5.11"
