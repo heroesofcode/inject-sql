@@ -9,4 +9,4 @@ tokio = { version = "1.39.2", features = ["full"] }
 scraper = "0.20.0"
 regex = "1.10.6"
 colored = "2"
-clap = "4.5.15"
+clap = "4.5.16"
