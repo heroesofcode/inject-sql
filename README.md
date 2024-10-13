@@ -1,10 +1,10 @@
-# injectsql
+# inject-sql
 
-[![CI](https://github.com/heroesofcode/injeqtor/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/injeqtor/actions/workflows/CI.yml)
-[![Crates.io](https://img.shields.io/crates/v/injeqtor)](https://crates.io/crates/injeqtor)
+[![CI](https://github.com/heroesofcode/inject-sql/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/inject-sql/actions/workflows/CI.yml)
+[![Crates.io](https://img.shields.io/crates/v/injectsql)](https://crates.io/crates/injectsql)
 [![Rustc](https://img.shields.io/badge/rustc-1.74.1-blue.svg?logo=rust&logoColor=orange)](https://img.shields.io/badge/rustc-1.70.0-blue.svg?logo=rust&logoColor=orange)
-[![Downloads](https://img.shields.io/crates/d/injeqtor.svg?logo=rust&logoColor=orange)](https://crates.io/crates/injeqtor)
-[![License](https://img.shields.io/github/license/heroesofcode/injeqtor.svg)](https://github.com/heroesofcode/injeqtor/blob/main/LICENSE)
+[![Downloads](https://img.shields.io/crates/d/injectsql.svg?logo=rust&logoColor=orange)](https://crates.io/crates/injectsql)
+[![License](https://img.shields.io/github/license/heroesofcode/injectsql.svg)](https://github.com/heroesofcode/injectsql/blob/main/LICENSE)
 
 Command Line Tools to check for SQL Injection vulnerability. This tool is to help pentest in their daily lives quickly.
 
@@ -40,7 +40,7 @@ Choose your payload
 8 - Get Database
 ```
 
-<img src="https://github.com/heroesofcode/injeqtor/blob/main/assets/example.png?raw=true" height=400>
+<img src="https://github.com/heroesofcode/inject-sql/blob/main/assets/example.png?raw=true" height=400>
 
 If you want to test or are studying pentest I recommend you use these tools below:
 

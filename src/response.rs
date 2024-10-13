@@ -65,9 +65,9 @@ async fn response(
 
 fn contains_sql_injection(body: &str) -> Result<String, String> {
     if body.contains("mysql_fetch_array()") || body.contains("SQL syntax") {
-        Ok("[x] Vulnerável a SQL Injection".to_string())
+        Ok("[x] Vulnerable to SQL Injection".to_string())
     } else {
-        Err("[] Nenhuma vulnerabilidade encontrada".to_string())
+        Err("[] No vulnerabilities found".to_string())
     }
 }
 
