@@ -1,4 +1,4 @@
-# injectsql
+# inject-sql
 
 [![CI](https://github.com/heroesofcode/injeqtor/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/injeqtor/actions/workflows/CI.yml)
 [![Crates.io](https://img.shields.io/crates/v/injeqtor)](https://crates.io/crates/injeqtor)
@@ -40,7 +40,7 @@ Choose your payload
 8 - Get Database
 ```
 
-<img src="https://github.com/heroesofcode/injeqtor/blob/main/assets/example.png?raw=true" height=400>
+<img src="https://github.com/heroesofcode/inject-sql/blob/main/assets/example.png?raw=true" height=400>
 
 If you want to test or are studying pentest I recommend you use these tools below:
 
