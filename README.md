@@ -4,7 +4,7 @@
 [![Crates.io](https://img.shields.io/crates/v/injectsql)](https://crates.io/crates/injectsql)
 [![Rustc](https://img.shields.io/badge/rustc-1.74.1-blue.svg?logo=rust&logoColor=orange)](https://img.shields.io/badge/rustc-1.70.0-blue.svg?logo=rust&logoColor=orange)
 [![Downloads](https://img.shields.io/crates/d/injectsql.svg?logo=rust&logoColor=orange)](https://crates.io/crates/injectsql)
-[![License](https://img.shields.io/github/license/heroesofcode/injectsql.svg)](https://github.com/heroesofcode/injectsql/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/heroesofcode/inject-sql.svg)](https://github.com/heroesofcode/inject-sql/blob/main/LICENSE)
 
 Command Line Tools to check for SQL Injection vulnerability. This tool is to help pentest in their daily lives quickly.
 
