@@ -1,8 +1,8 @@
-# injeqtor
+# injectsql
 
 [![CI](https://github.com/heroesofcode/injeqtor/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/injeqtor/actions/workflows/CI.yml)
 [![Crates.io](https://img.shields.io/crates/v/injeqtor)](https://crates.io/crates/injeqtor)
-[![Rustc](https://img.shields.io/badge/rustc-1.70.0-blue.svg?logo=rust&logoColor=orange)](https://img.shields.io/badge/rustc-1.70.0-blue.svg?logo=rust&logoColor=orange)
+[![Rustc](https://img.shields.io/badge/rustc-1.74.1-blue.svg?logo=rust&logoColor=orange)](https://img.shields.io/badge/rustc-1.70.0-blue.svg?logo=rust&logoColor=orange)
 [![Downloads](https://img.shields.io/crates/d/injeqtor.svg?logo=rust&logoColor=orange)](https://crates.io/crates/injeqtor)
 [![License](https://img.shields.io/github/license/heroesofcode/injeqtor.svg)](https://github.com/heroesofcode/injeqtor/blob/main/LICENSE)
 
@@ -14,7 +14,7 @@ Command Line Tools to check for SQL Injection vulnerability. This tool is to hel
 Installing from [crates.io](https://crates.io/) (requires Rust/Cargo):
 
 ```shell
-cargo install injeqtor
+cargo install injectsql
 ```
 
 ### Homebrew
@@ -22,7 +22,7 @@ You can install with [Homebrew](https://brew.sh/):
 
 ```shell
 brew tap heroesofcode/taps
-brew install heroesofcode/taps/injeqtor
+brew install heroesofcode/taps/injectsql
 ```
 
 ## Usage
@@ -52,7 +52,7 @@ If you want to test or are studying pentest I recommend you use these tools belo
 > injeqtor does not perform an in-depth SQL injection attack, it only checks whether SQL Injection is vulnerable and tries to find the name of the database. If you want to carry out an attack to obtain more information, I recommend using [sqlmap](https://github.com/sqlmapproject/sqlmap).
 
 > [!WARNING]
-> The use of the `injeqtor` tool for offensive activities without express permission from the parties involved is illegal. The user is solely responsible for ensuring compliance with applicable local, state and federal laws. The creators of this software are not responsible for any misuse or damages resulting from the use of this program.
+> The use of the `injectsql` tool for offensive activities without express permission from the parties involved is illegal. The user is solely responsible for ensuring compliance with applicable local, state and federal laws. The creators of this software are not responsible for any misuse or damages resulting from the use of this program.
 
 ## Contributing
 

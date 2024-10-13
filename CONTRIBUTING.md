@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for wanting to contribute to [injector](https://github.com/heroesofcode/injeqtor)
+Thank you for wanting to contribute to [injectsql](https://github.com/heroesofcode/inject-sql)
 
 1 - Fork the project
 2 - Make your adjustments and changes and open a PR
