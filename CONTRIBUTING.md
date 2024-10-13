@@ -1,17 +1,32 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change.
+Thank you for wanting to contribute to [injector](https://github.com/heroesofcode/injeqtor)
 
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+1 - Fork the project
+2 - Make your adjustments and changes and open a PR
 
-## Pull Request Process
+use this description in the PR
 
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a
-   build.
-2. Update the README.md with details of changes to the interface, this includes new environment
-   variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the README.md to the new version that this
-   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you
-   do not have permission to do that, you may request the second reviewer to merge it for you.
+```
+## Description 📝
+
+Update Cargo.toml and config cargo
+
+## How Has This Been Tested?
+Locally.
+
+## Types of Changes
+[ ] Bug fix (non-breaking change which fixes an issue)
+[ ] New feature (non-breaking change which adds functionality)
+[ ] Breaking change (fix or feature that would cause existing functionality to change)
+[ ] Documentation (no code change)
+[ ] Refactor (refactoring production code)
+[ ] Update library Cargo.toml 
+
+## Checklist:
+[ ] My code follows the code style of this project
+[ ] I have updated the documentation accordingly
+[ ] I have formatted the code with [rustfmt](https://github.com/rust-lang/rustfmt)
+[ ] I have added tests to cover my changes
+[ ] All new and existing tests passed
+```

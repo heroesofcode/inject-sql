@@ -40,7 +40,7 @@ Choose your payload
 8 - Get Database
 ```
 
-<img src="https://github.com/heroesofcode/injeqtor/blob/main/img/example.png?raw=true" height=400>
+<img src="https://github.com/heroesofcode/injeqtor/blob/main/assets/example.png?raw=true" height=400>
 
 If you want to test or are studying pentest I recommend you use these tools below:
 
@@ -52,7 +52,7 @@ If you want to test or are studying pentest I recommend you use these tools belo
 > injeqtor does not perform an in-depth SQL injection attack, it only checks whether SQL Injection is vulnerable and tries to find the name of the database. If you want to carry out an attack to obtain more information, I recommend using [sqlmap](https://github.com/sqlmapproject/sqlmap).
 
 > [!WARNING]
-> Usage of injeqtor for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
+> The use of the `injeqtor` tool for offensive activities without express permission from the parties involved is illegal. The user is solely responsible for ensuring compliance with applicable local, state and federal laws. The creators of this software are not responsible for any misuse or damages resulting from the use of this program.
 
 ## Contributing
 
