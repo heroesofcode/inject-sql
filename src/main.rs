@@ -10,7 +10,7 @@ use response::validation_exist_sql_injection;
 async fn main() {
     check_version();
 
-    println!("Injeqtor");
+    println!("injectsql");
 
     println!("Command Line Tools to check for SQL Injection vulnerability\n");
 
@@ -46,7 +46,7 @@ async fn main() {
 }
 
 fn check_version() {
-    let _app = Command::new("injeqtor")
+    let _app = Command::new("injectsql")
         .version("0.1.0")
         .ignore_errors(true)
         .get_matches();
