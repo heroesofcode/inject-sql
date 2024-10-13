@@ -595,7 +595,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "injeqtor"
+name = "injectsql"
 version = "0.1.0"
 dependencies = [
  "clap",
