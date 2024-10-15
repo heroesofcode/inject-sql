@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Version 0.2.0
+**2024-10-15**
+
+- Bump openssl from 0.10.64 to 0.10.66 by @dependabot - #37
+- Add new tools and adjust readme by @joaolfp - #36
+- Migrating the layout to ratatui by @joaolfp - #35
+
 ## Version 0.1.0
 **2024-10-13**
 
