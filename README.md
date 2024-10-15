@@ -6,7 +6,7 @@
 [![Downloads](https://img.shields.io/crates/d/injectsql.svg?logo=rust&logoColor=orange)](https://crates.io/crates/injectsql)
 [![License](https://img.shields.io/github/license/heroesofcode/inject-sql.svg)](https://github.com/heroesofcode/inject-sql/blob/main/LICENSE)
 
-Command Line Tools to check for SQL Injection vulnerability. This tool is to help pentest in their daily lives quickly.
+🛢️🖥️ Command Line Tools to check for SQL Injection vulnerability. This tool is to help pentest in their daily lives quickly.
 
 ## Installing
 
