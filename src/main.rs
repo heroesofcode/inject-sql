@@ -163,7 +163,7 @@ async fn show_result(url: &str, payload_type: &str) -> String {
 
 fn check_version() {
 	let _app = Command::new("injectsql")
-		.version("0.1.0")
+		.version("0.2.0")
 		.ignore_errors(true)
 		.get_matches();
 }
