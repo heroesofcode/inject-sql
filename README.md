@@ -6,7 +6,7 @@
 [![Downloads](https://img.shields.io/crates/d/injectsql.svg?logo=rust&logoColor=orange)](https://crates.io/crates/injectsql)
 [![License](https://img.shields.io/github/license/heroesofcode/inject-sql.svg)](https://github.com/heroesofcode/inject-sql/blob/main/LICENSE)
 
-Command Line Tools to check for SQL Injection vulnerability. This tool is to help pentest in their daily lives quickly.
+🛢️🖥️ Command Line Tools to check for SQL Injection vulnerability. This tool is to help pentest in their daily lives quickly.
 
 ## Installing
 
@@ -26,27 +26,14 @@ brew install heroesofcode/taps/injectsql
 ```
 
 ## Usage
-In these options you will have several ways to try to find a vulnerability
 
-```
-Choose your payload
-1 - classical 1
-2 - classical 2
-3 - time-based
-4 - blind 1
-5 - blind 2
-6 - boolean 1
-7 - boolean 2
-8 - Get Database
-```
-
-<img src="https://github.com/heroesofcode/inject-sql/blob/main/assets/example.png?raw=true" height=400>
+<img src="https://github.com/heroesofcode/inject-sql/blob/main/assets/example.png?raw=true">
 
 If you want to test or are studying pentest I recommend you use these tools below:
 
 - [Acunetix](http://testphp.vulnweb.com/) 🇬🇧
 - [HackTheBox](https://www.hackthebox.com/) 🇬🇧
-- [Solyd](https://solyd.com.br/ead/) 🇧🇷
+- [Solyd](https://solyd.com.br/) 🇧🇷
 
 > [!IMPORTANT] 
 > injeqtor does not perform an in-depth SQL injection attack, it only checks whether SQL Injection is vulnerable and tries to find the name of the database. If you want to carry out an attack to obtain more information, I recommend using [sqlmap](https://github.com/sqlmapproject/sqlmap).
