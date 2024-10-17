@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 0.3.0
+**2024-10-16**
+
+- Add option get database by @joaolfp - #39
+- Fix when url fails by @joaolfp - #38
+
 ## Version 0.2.0
 **2024-10-15**
 
