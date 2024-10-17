@@ -86,7 +86,7 @@ async fn run_app<B: ratatui::backend::Backend>(terminal: &mut Terminal<B>) -> io
 			f.render_widget(url_block, chunks[1]);
 
             let type_payload_text = Paragraph::new(
-                "\n1 - classical 1\n2 - classical 2\n3 - time-based\n4 - blind 1\n5 - blind 2\n6 - boolean 1\n7 - boolean 2\n")
+                "\n1 - classical 1\n2 - classical 2\n3 - time-based\n4 - blind 1\n5 - blind 2\n6 - boolean 1\n7 - boolean 2\n8 - Get Database\n")
 				.style(Style::default().fg(Color::Green));
 			f.render_widget(type_payload_text, chunks[2]);
 
