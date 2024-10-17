@@ -33,6 +33,10 @@ brew install heroesofcode/taps/injectsql
 
 ## Usage
 
+```sh
+injectsql
+```
+
 <img src="https://github.com/heroesofcode/inject-sql/blob/main/assets/example.png?raw=true">
 
 If you want to test or are studying pentest I recommend you use these tools below:
