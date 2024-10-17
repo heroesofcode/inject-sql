@@ -25,6 +25,7 @@ use response::validation_exist_sql_injection;
 async fn main() -> Result<(), io::Error> {
 	check_version();
 	enable_raw_mode()?;
+
 	let mut stdout = stdout();
 	execute!(stdout, EnterAlternateScreen)?;
 	let backend = CrosstermBackend::new(stdout);
@@ -55,9 +56,9 @@ async fn run_app<B: ratatui::backend::Backend>(terminal: &mut Terminal<B>) -> io
 				.direction(Direction::Vertical)
 				.constraints(
 					[
-                        Constraint::Percentage(10),
 						Constraint::Percentage(10),
-                        Constraint::Percentage(30),
+						Constraint::Percentage(10),
+						Constraint::Percentage(30),
 						Constraint::Percentage(10),
 						Constraint::Percentage(10),
 						Constraint::Percentage(10),
@@ -66,54 +67,22 @@ async fn run_app<B: ratatui::backend::Backend>(terminal: &mut Terminal<B>) -> io
 				)
 				.split(f.area());
 
-			let info_text = Paragraph::new(
-                "🌐 🛢️ Command Line Tools to check for SQL Injection vulnerability.\n👨‍💻 https://github.com/heroesofcode/inject-sql")
-                .block(
-					Block::default()
-						.borders(Borders::ALL),
-				)
-				.style(Style::default().fg(Color::Green));
+			let info_text = add_info_text();
 			f.render_widget(info_text, chunks[0]);
 
-			let url_block = Paragraph::new(&url[..])
-				.block(
-					Block::default()
-						.title("Enter the URL")
-						.borders(Borders::ALL),
-				)
-				.style(Style::default().fg(Color::White))
-				.wrap(Wrap { trim: true });
+			let url_block = add_url_block(&url);
 			f.render_widget(url_block, chunks[1]);
 
-            let type_payload_text = Paragraph::new(
-                "\n1 - classical 1\n2 - classical 2\n3 - time-based\n4 - blind 1\n5 - blind 2\n6 - boolean 1\n7 - boolean 2\n")
-				.style(Style::default().fg(Color::Green));
+			let type_payload_text = add_type_payload_text();
 			f.render_widget(type_payload_text, chunks[2]);
 
-			let payload_block = Paragraph::new(&payload_type[..])
-				.block(
-					Block::default()
-						.title("Enter the payload type")
-						.borders(Borders::all())
-				)
-                .style(Style::default().fg(Color::White))
-				.wrap(Wrap { trim: true });
+			let payload_block = add_payload_block(&payload_type);
 			f.render_widget(payload_block, chunks[3]);
 
-			let result_block = Paragraph::new(&result_text[..])
-				.alignment(Alignment::Center)
-				.block(
-					Block::default()
-						.title("Result")
-						.borders(Borders::TOP)
-						.style(Style::default().fg(Color::Yellow)),
-				)
-				.wrap(Wrap { trim: true });
+			let result_block = add_result_block(&result_text);
 			f.render_widget(result_block, chunks[4]);
 
-			let help_text = Paragraph::new(
-                "Use TAB to switch between fields. Press ENTER to validate.")
-				.style(Style::default().fg(Color::White));
+			let help_text = add_help_text();
 			f.render_widget(help_text, chunks[5]);
 		})?;
 
@@ -144,6 +113,73 @@ async fn run_app<B: ratatui::backend::Backend>(terminal: &mut Terminal<B>) -> io
 			}
 		}
 	}
+}
+
+fn add_info_text() -> Paragraph<'static> {
+	let text = "🌐 🛢️ Command Line Tools to check for SQL Injection vulnerability.\n👨‍💻 https://github.com/heroesofcode/inject-sql";
+
+	let info_text = Paragraph::new(text)
+		.block(Block::default().borders(Borders::ALL))
+		.style(Style::default().fg(Color::Green));
+
+	return info_text;
+}
+
+fn add_url_block(url: &str) -> Paragraph<'_> {
+	let url_block = Paragraph::new(&url[..])
+		.block(
+			Block::default()
+				.title("Enter the URL")
+				.borders(Borders::ALL),
+		)
+		.style(Style::default().fg(Color::White))
+		.wrap(Wrap { trim: true });
+
+	return url_block;
+}
+
+fn add_type_payload_text() -> Paragraph<'static> {
+	let text = "\n1 - classical 1\n2 - classical 2\n3 - time-based\n4 - blind 1\n5 - blind 2\n6 - boolean 1\n7 - boolean 2\n8 - Get Database\n";
+
+	let type_payload_text = Paragraph::new(text).style(Style::default().fg(Color::Green));
+
+	return type_payload_text;
+}
+
+fn add_payload_block(payload_type: &str) -> Paragraph<'_> {
+	let payload_block = Paragraph::new(&payload_type[..])
+		.block(
+			Block::default()
+				.title("Enter the payload type")
+				.borders(Borders::all()),
+		)
+		.style(Style::default().fg(Color::White))
+		.wrap(Wrap { trim: true });
+
+	return payload_block;
+}
+
+fn add_result_block(result_text: &str) -> Paragraph<'_> {
+	let result_block = Paragraph::new(&result_text[..])
+		.alignment(Alignment::Center)
+		.block(
+			Block::default()
+				.title("Result")
+				.borders(Borders::TOP)
+				.style(Style::default().fg(Color::Yellow)),
+		)
+		.wrap(Wrap { trim: true });
+
+	return result_block;
+}
+
+fn add_help_text() -> Paragraph<'static> {
+	let text = "Use TAB to switch between fields. Press ENTER to validate.";
+
+	let help_text = Paragraph::new(text)
+		.style(Style::default().fg(Color::White));
+
+	return help_text;
 }
 
 async fn show_result(url: &str, payload_type: &str) -> String {
