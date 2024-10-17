@@ -1,4 +1,3 @@
-use std::process::exit;
 use reqwest::Client;
 use regex::Regex;
 use scraper::{Html, Selector};
@@ -48,8 +47,7 @@ async fn response(
             }
         }
     } else {
-        println!("Failed to make the request");
-        exit(1);
+        Err(reqwest::Error::from(response.error_for_status().unwrap_err()))
     }
 }
 
