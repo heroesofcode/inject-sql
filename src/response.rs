@@ -5,7 +5,6 @@ use scraper::{Html, Selector};
 pub async fn validation_exist_sql_injection(
     url: &str,
     payload: &str) -> Result<String, reqwest::Error> {
-
     let client = Client::new();
     let set_payload = match payload {
         "1" => "' OR '1'='1",
@@ -27,7 +26,6 @@ async fn response(
     url: &str,
     payload: &str,
     show_body: bool) -> Result<String, reqwest::Error> {
-
     let test_url = format!("{}{}", url, payload);
 
     let response = client.get(&test_url).send().await?;
