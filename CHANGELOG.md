@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Version 0.4.0
+**2024-10-22**
+
+- Fix lint warning and add renovate by @joaolfp - #43
+- Bump tokio from 1.40.0 to 1.41.0 by @dependabot #42
+- Bump ratatui from 0.28.1 to 0.29.0 by @dependabot - #41
+
 ## Version 0.3.0
 **2024-10-16**
 
