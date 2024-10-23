@@ -13,7 +13,7 @@
 </p>
 
 
-🛢️🖥️ Command Line Tools to check for SQL Injection vulnerability. This tool is to help pentest in their daily lives quickly.
+🛢️ 🖥️ Command Line Tools to check for SQL Injection vulnerability. This tool is to help pentest in their daily lives quickly.
 
 ## Installing
 
