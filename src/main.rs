@@ -1,6 +1,5 @@
 use clap::Command;
 use std::io;
-use tokio;
 
 use ratatui::{
 	backend::CrosstermBackend,
@@ -118,16 +117,16 @@ async fn run_app<B: ratatui::backend::Backend>(terminal: &mut Terminal<B>) -> io
 
 async fn show_result(url: &str, payload_type: &str) -> String {
     if !url.is_empty() && !payload_type.is_empty() {
-        match validation_exist_sql_injection(&url, &payload_type).await {
+        match validation_exist_sql_injection(url, payload_type).await {
             Ok(value) => {
-                return format!("{}", value);
+                format!("{}", value)
             }
             Err(error) => {
-               return  format!("{}", error);
+               format!("{}", error)
             }
         }
     } else {
-        return "Fields cannot be empty".to_string();
+        "Fields cannot be empty".to_string()
     }
 }
 
