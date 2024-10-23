@@ -11,11 +11,11 @@ pub fn add_info_text() -> Paragraph<'static> {
 		.block(Block::default().borders(Borders::ALL))
 		.style(Style::default().fg(Color::Green));
 
-	return info_text;
+	info_text
 }
 
 pub fn add_url_block(url: &str) -> Paragraph<'_> {
-	let url_block = Paragraph::new(&url[..])
+	let url_block = Paragraph::new(url)
 		.block(
 			Block::default()
 				.title("Enter the URL")
@@ -24,7 +24,7 @@ pub fn add_url_block(url: &str) -> Paragraph<'_> {
 		.style(Style::default().fg(Color::White))
 		.wrap(Wrap { trim: true });
 
-	return url_block;
+	url_block
 }
 
 pub fn add_type_payload_text() -> Paragraph<'static> {
@@ -32,11 +32,11 @@ pub fn add_type_payload_text() -> Paragraph<'static> {
 
 	let type_payload_text = Paragraph::new(text).style(Style::default().fg(Color::Green));
 
-	return type_payload_text;
+	type_payload_text
 }
 
 pub fn add_payload_block(payload_type: &str) -> Paragraph<'_> {
-	let payload_block = Paragraph::new(&payload_type[..])
+	let payload_block = Paragraph::new(payload_type)
 		.block(
 			Block::default()
 				.title("Enter the payload type")
@@ -45,11 +45,11 @@ pub fn add_payload_block(payload_type: &str) -> Paragraph<'_> {
 		.style(Style::default().fg(Color::White))
 		.wrap(Wrap { trim: true });
 
-	return payload_block;
+	payload_block
 }
 
 pub fn add_result_block(result_text: &str) -> Paragraph<'_> {
-	let result_block = Paragraph::new(&result_text[..])
+	let result_block = Paragraph::new(result_text)
 		.alignment(Alignment::Center)
 		.block(
 			Block::default()
@@ -59,7 +59,7 @@ pub fn add_result_block(result_text: &str) -> Paragraph<'_> {
 		)
 		.wrap(Wrap { trim: true });
 
-	return result_block;
+	result_block
 }
 
 pub fn add_help_text() -> Paragraph<'static> {
@@ -68,5 +68,5 @@ pub fn add_help_text() -> Paragraph<'static> {
 	let help_text = Paragraph::new(text)
 		.style(Style::default().fg(Color::White));
 
-	return help_text;
+	help_text
 }

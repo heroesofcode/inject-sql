@@ -119,7 +119,7 @@ async fn show_result(url: &str, payload_type: &str) -> String {
     if !url.is_empty() && !payload_type.is_empty() {
         match validation_exist_sql_injection(url, payload_type).await {
             Ok(value) => {
-                format!("{}", value)
+                value.to_string()
             }
             Err(error) => {
                format!("{}", error)
