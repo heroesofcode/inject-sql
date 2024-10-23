@@ -47,7 +47,7 @@ async fn response(
             }
         }
     } else {
-        Err(reqwest::Error::from(response.error_for_status().unwrap_err()))
+        Err(response.error_for_status().unwrap_err())
     }
 }
 
