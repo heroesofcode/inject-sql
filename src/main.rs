@@ -16,10 +16,10 @@ use crossterm::{
 use std::io::stdout;
 
 mod response;
-mod block;
+mod add_block;
 
-use response::validation_exist_sql_injection;
-use block::*;
+use response::*;
+use add_block::*;
 
 #[tokio::main]
 async fn main() -> Result<(), io::Error> {
@@ -67,22 +67,22 @@ async fn run_app<B: ratatui::backend::Backend>(terminal: &mut Terminal<B>) -> io
                 )
                 .split(f.area());
 
-            let info_text = add_info_text();
+            let info_text = AddBlock::add_info_text();
             f.render_widget(info_text, chunks[0]);
 
-            let url_block = add_url_block(&url);
+            let url_block = AddBlock::add_url_block(&url);
             f.render_widget(url_block, chunks[1]);
 
-            let type_payload_text = add_type_payload_text();
+            let type_payload_text = AddBlock::add_type_payload_text();
             f.render_widget(type_payload_text, chunks[2]);
 
-            let payload_block = add_payload_block(&payload_type);
+            let payload_block = AddBlock::add_payload_block(&payload_type);
             f.render_widget(payload_block, chunks[3]);
 
-            let result_block = add_result_block(&result_text);
+            let result_block = AddBlock::add_result_block(&result_text);
             f.render_widget(result_block, chunks[4]);
 
-            let help_text = add_help_text();
+            let help_text = AddBlock::add_help_text();
             f.render_widget(help_text, chunks[5]);
         })?;
 
@@ -117,7 +117,7 @@ async fn run_app<B: ratatui::backend::Backend>(terminal: &mut Terminal<B>) -> io
 
 async fn show_result(url: &str, payload_type: &str) -> String {
     if !url.is_empty() && !payload_type.is_empty() {
-        match validation_exist_sql_injection(url, payload_type).await {
+        match Response::validation_exist_sql_injection(url, payload_type).await {
             Ok(value) => {
                 value.to_string()
             }
