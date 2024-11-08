@@ -8,8 +8,7 @@ pub struct AddBlock;
 
 impl AddBlock {
     pub fn add_info_text() -> Paragraph<'static> {
-        let text = "🌐 🛢️ Command Line Tools to check for SQL Injection vulnerability.\n\
-        👨‍💻 https://github.com/heroesofcode/inject-sql";
+        let text = "🌐 🛢️ Command Line Tools to check for SQL Injection vulnerability.";
 
         let info_text = Paragraph::new(text)
             .block(Block::default().borders(Borders::ALL))
