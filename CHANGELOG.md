@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## Version 0.5.0
+**2024-11-08**
+
+- Remove url GitHub header and update example image by @joaolfp - #52
+- Update example and tokio version in Cargo.toml by @joaolfp - #51
+- Update Rust crate tokio to v1.41.1 by @renovatebot - #50
+- Update Rust crate scraper to 0.21.0 by @renovatebot - #49
+- Update Rust crate reqwest to v0.12.9 by @renovatebot - #48
+- Adjust files and code by @joaolfp - #47
+- Update Rust crate regex to v1.11.1 by @renovatebot - #46
+- Bump regex from 1.11.0 to 1.11.1 by @dependabot - #45
+
 ## Version 0.4.0
 **2024-10-22**
 
