@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## Version 0.6.0
+**2024-12-16**
+
+- Update all cargo.lock with idna by @joaolfp #60
+- Fix security idna 1.0.3 by @joaolfp - #59
+- Update Rust crate colored to v2.2.0 by @renovatebot - #58
+- Bump clap from 4.5.22 to 4.5.23 by @renovatebot - #56
+- Update Rust crate scraper to 0.22.0 by @renovatebot - #55
+- Update all dependencies by @renovatebot - #54
+- Update Rust crate clap to v4.5.21 by @renovatebot - #53
+
 ## Version 0.5.0
 **2024-11-08**
 
