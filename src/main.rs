@@ -44,7 +44,9 @@ async fn main() -> Result<(), io::Error> {
     Ok(())
 }
 
-async fn run_app<B: ratatui::backend::Backend>(terminal: &mut Terminal<B>) -> io::Result<()> {
+async fn run_app<B: ratatui::backend::Backend>(
+    terminal: &mut Terminal<B>
+) -> io::Result<()> {
     let mut url = String::new();
     let mut payload_type = String::new();
     let mut result_text = String::new();
@@ -117,7 +119,10 @@ async fn run_app<B: ratatui::backend::Backend>(terminal: &mut Terminal<B>) -> io
 
 async fn show_result(url: &str, payload_type: &str) -> String {
     if !url.is_empty() && !payload_type.is_empty() {
-        match Response::validation_exist_sql_injection(url, payload_type).await {
+        match Response::validation_exist_sql_injection(
+            url, 
+            payload_type
+        ).await {
             Ok(value) => {
                 value.to_string()
             }
