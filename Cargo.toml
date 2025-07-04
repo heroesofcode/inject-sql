@@ -11,7 +11,7 @@ exclude = [".github/**"]
 
 [dependencies]
 reqwest = { version = "0.12.21", features = ["json"] }
-tokio = { version = "1.41.2", features = ["full"] }
+tokio = { version = "1.46.1", features = ["full"] }
 scraper = "0.23.1"
 regex = "1.11.1"
 clap = "4.5.40"
