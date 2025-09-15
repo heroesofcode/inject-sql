@@ -36,7 +36,7 @@ async fn main() -> Result<(), io::Error> {
 
 fn check_version() {
 	let _app = Command::new("injectsql")
-		.version("0.6.0")
+		.version("0.7.0")
 		.ignore_errors(true)
 		.get_matches();
 }

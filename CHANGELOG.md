@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Version 0.7.0
+**2025-09-14**
+
+- refactor: improvements code and setup release action by @joaolfp - #156
+- chore(deps): update Rust crate clap to v4.5.47 by @renovatebot - #154
+- chore(deps): update Rust crate scraper to 0.24.0 by @renovatebot - #151
+- chore(deps): update Rust crate reqwest to v0.12.23 by @renovatebot - #149
+
 ## Version 0.6.0
 **2024-12-16**
 
